@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flixdroop - Movies & Web Series</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #141414;
+      color: white;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+    .header h1 {
+      margin: 0;
+      color: #e50914;
+    }
+    #search {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+    }
+    .movie-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+    .movie-card {
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+    .movie-card img {
+      width: 100%;
+      display: block;
+    }
+    .movie-card h3 {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Flixdroop</h1>
+    <input type="text" id="search" placeholder="Search movies..." />
+  </header>  <main class="movie-container" id="movie-container">
+    <div class="movie-card">
+      <img src="https://via.placeholder.com/300x450" alt="Movie Poster">
+      <h3>Sample Movie</h3>
+    </div>
+    <!-- More cards will load here -->
+  </main>  <script src="script.js"></script></body>
+</html>
